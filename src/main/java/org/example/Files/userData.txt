@@ -1,0 +1,5 @@
+USER DATA:
+NAME: John Doe
+AGE: 33
+GENDER: male
+PROFESSION: programmer
