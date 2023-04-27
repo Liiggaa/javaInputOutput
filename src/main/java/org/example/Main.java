@@ -92,22 +92,13 @@ public class Main {
         System.out.println("Profession: "+ profession);
 
 
-        FileInputStream in = null;
+
         FileOutputStream out = null;
 
 
         try {
-            in = new FileInputStream("src/main/java/org/example/Files/user.txt");
             out = new FileOutputStream("src/main/java/org/example/Files/userData.txt");
 
-
-            int c;
-            // read from input and write to output
-            while ((c= in.read()) != -1) { // -1
-                out.write(c);// do operation
-
-                // c = in.read(); // read next byte, check if it is not -1
-            }
 
             String userData = "USER DATA:";
             byte[] byteUserData = userData.getBytes();
@@ -145,15 +136,7 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         } finally { // after all operations is done
-            if (in != null) { // if input stream is not null
-                try {
-                    in.close(); // close input stream
-                } catch (IOException e) {
-                    e.printStackTrace();
-
-                }
-            }
-            if (out != null) { // if input is not null
+            if (out != null) {
                 try {
                     out.close(); // close stream
                 } catch (IOException e) {
